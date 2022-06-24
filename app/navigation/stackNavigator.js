@@ -1,6 +1,6 @@
 import Home from "../screens/Home";
-import Transaction from "../screens/Home";
-import Account from "../screens/Home";
+import Transaction from "../screens/Transaction";
+import Account from "../screens/Account";
 import Splash from '../screens/Splash';
 
 export const WelcomeStack = 

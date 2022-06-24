@@ -22,8 +22,38 @@ export default function Home({navigation}) {
     }
 
   }
+  const handleNavigation = (item)=>{
+    navigation.navigate('Account',{item})
+  }
+  const cardItems = [
+    {
+      id:1,
+      header:'PROSPA CURRENT ACCOUNT',
+      subText: '00-00-00-00-00-00',
+      amount:5234.96,
+      leftIcon:<CurrentAccount />,
+      leftIconBackground:fadePink
+
+    },
+    {
+      id:2,
+      header:'SAVINGS',
+      subText:'00-00-00-00-00-00',
+      amount:3234.43,
+      leftIcon:<SavingAccount />,
+      leftIconBackground:fadePurple
+    },
+    {
+      id:3,
+      header:'TAX ACCOUNT',
+      subText:'00-00-00-00-00-00',
+      amount:10234,
+      leftIcon:<TaxAccount />,
+      leftIconBackground:lightPurple
+    }
+  ]
   return (
-    <View style={styles.container}>
+    <View style={styles.mainContainer}>
       <StatusBar backgroundColor={primaryColor} barStyle="light-content" />
       <View style={styles.header}>
         <Texts bold style={{...styles.headerText,color:showDashboard?white:primaryColor}}>Dashboard</Texts>
@@ -49,28 +79,19 @@ export default function Home({navigation}) {
             </View>
           </View>
           <View style={styles.cardWrapper}>
-            <Card 
-            header='PROSPA CURRENT ACCOUNT'
-            subText='00-00-00-00-00-00'
-            amount={5234.96}
-            leftIcon={<CurrentAccount />}
-            leftIconBackground={fadePink}
-      
-            />
-            <Card 
-            header='SAVINGS'
-            subText='00-00-00-00-00-00'
-            amount={3234.43}
-            leftIcon={<SavingAccount />}
-            leftIconBackground={fadePurple}
-            />
-            <Card
-            header='TAX ACCOUNT'
-            subText='00-00-00-00-00-00'
-            amount={10234}
-            leftIcon={<TaxAccount />}
-            leftIconBackground={lightPurple}
-            />
+            {
+              cardItems.map((item,index)=>(
+                <Card 
+                header={item.header}
+                subText={item.subText}
+                amount={item.amount}
+                leftIcon={item.leftIcon}
+                leftIconBackground={item.leftIconBackground}
+                key={index}
+                onPress={()=>handleNavigation(item)}
+                />
+              ))
+            }
           </View>
           <View>
             <ImageBackground source={require('../../assets/images/group8.png')} style={styles.cardCover}>

@@ -8,6 +8,10 @@ export default StyleSheet.create({
         flex:1,
         backgroundColor:background,
     },
+    mainContainer:{
+        flex:1,
+        backgroundColor:primaryColor,
+    },
     headerWrapper:{
         width:width,
         backgroundColor:primaryColor,

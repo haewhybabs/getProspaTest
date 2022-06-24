@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './styles';
 import Texts from '../Texts';
 import { formatMoney } from '../../constants/functions';  
-export default function Card({header,subText,amount,leftIcon,leftIconBackground}) {
+export default function Card({header,subText,amount,leftIcon,leftIconBackground,onPress}) {
     return (
-        <View style={styles.cardCover}>
+        <TouchableOpacity style={styles.cardCover} onPress={onPress}>
             <View style={styles.cardContentWrapper}>
                 <View>
                     <Texts bold style={styles.headerText}>{header}</Texts>
@@ -16,6 +16,6 @@ export default function Card({header,subText,amount,leftIcon,leftIconBackground}
                     {leftIcon}
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }

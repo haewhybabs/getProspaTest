@@ -1,5 +1,5 @@
 import { StyleSheet} from 'react-native';
-import {fadePink, pink, textColor, white} from '../../constants/colors';
+import {fadePink, pink, textColor, textColor1, white} from '../../constants/colors';
 import { width } from '../../constants/dimensions';
 export default StyleSheet.create({
     footer:{
@@ -25,6 +25,7 @@ export default StyleSheet.create({
     },
     footerText1:{
         marginTop:-20,
-        fontSize:11
+        fontSize:11,
+        color:textColor1
     }
 })
