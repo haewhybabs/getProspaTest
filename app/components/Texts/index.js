@@ -12,12 +12,12 @@ export default function Texts({
     <Text
       style={{...styles.text,...style,
         fontFamily: medium
-        ? "Roboto-Medium"
+        ? "Gilroy-Light"
         : bold
-        ? "Roboto-Bold"
+        ? "Gilroy-Extrabold"
         : regular
-        ? "Roboto-Regular"
-        : "Roboto-Regular"}}>
+        ? "Gilroy-Light"
+        : "Gilroy-Light"}}>
       {children}
     </Text>
   );
