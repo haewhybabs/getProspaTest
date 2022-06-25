@@ -6,11 +6,9 @@ import { fadePink, fadePurple, lightPurple, primaryColor, white } from '../../co
 import Texts from '../../components/Texts';
 import { getDateDetails } from '../../constants/functions'
 import Card from '../../components/Cards'
-import CurrentAccount from '../../assets/svgs/currentAccount.svg'
-import SavingAccount from '../../assets/svgs/savingAccount.svg'
-import TaxAccount from '../../assets/svgs/taxAccount.svg'
 import CloseIcon from '../../assets/svgs/close.svg'
 import Footer from '../../components/Footer'
+import { cardItems } from '../../constants/data'
 let date = getDateDetails()
 export default function Home({navigation}) {
   const [showDashboard,setShowDashboard] = React.useState(false);
@@ -23,35 +21,8 @@ export default function Home({navigation}) {
 
   }
   const handleNavigation = (item)=>{
-    navigation.navigate('Account',{item})
+    navigation.navigate('Account',{item,cardItems})
   }
-  const cardItems = [
-    {
-      id:1,
-      header:'PROSPA CURRENT ACCOUNT',
-      subText: '00-00-00-00-00-00',
-      amount:5234.96,
-      leftIcon:<CurrentAccount />,
-      leftIconBackground:fadePink
-
-    },
-    {
-      id:2,
-      header:'SAVINGS',
-      subText:'00-00-00-00-00-00',
-      amount:3234.43,
-      leftIcon:<SavingAccount />,
-      leftIconBackground:fadePurple
-    },
-    {
-      id:3,
-      header:'TAX ACCOUNT',
-      subText:'00-00-00-00-00-00',
-      amount:10234,
-      leftIcon:<TaxAccount />,
-      leftIconBackground:lightPurple
-    }
-  ]
   return (
     <View style={styles.mainContainer}>
       <StatusBar backgroundColor={primaryColor} barStyle="light-content" />
@@ -85,7 +56,7 @@ export default function Home({navigation}) {
                 header={item.header}
                 subText={item.subText}
                 amount={item.amount}
-                leftIcon={item.leftIcon}
+                leftIcon={<item.leftIcon/>}
                 leftIconBackground={item.leftIconBackground}
                 key={index}
                 onPress={()=>handleNavigation(item)}

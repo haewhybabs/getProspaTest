@@ -7,6 +7,7 @@ export default function Texts({
   medium,
   bold,
   regular,
+  extrabold
 }) {
   return (
     <Text
@@ -14,10 +15,12 @@ export default function Texts({
         fontFamily: medium
         ? "Gilroy-Light"
         : bold
-        ? "Gilroy-Extrabold"
+        ? "Gilroy-Bold"
         : regular
-        ? "Gilroy-Light"
-        : "Gilroy-Light"}}>
+        ? "Gilroy-Medium"
+        : extrabold
+        ? "Gilroy-ExtraBold"
+        : "Gilroy-Medium"}}>
       {children}
     </Text>
   );

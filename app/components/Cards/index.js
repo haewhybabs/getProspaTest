@@ -19,3 +19,24 @@ export default function Card({header,subText,amount,leftIcon,leftIconBackground,
         </TouchableOpacity>
     )
 }
+export function CircleBorderIcon({icon,style}){
+    return(
+        <View style={{...styles.circleSmallCard,...style}}>
+            {icon}
+        </View>
+    )
+}
+export function CircleIcon({icon,style,background}){
+    return(
+        <View style={{...styles.circleCard,background,...style}}>
+            {icon}
+        </View>
+    )
+}
+export function DefaultCard({children,style}){
+    return(
+        <View style={{...styles.defaultCard,...style}}>
+            {children}
+        </View>
+    )
+}

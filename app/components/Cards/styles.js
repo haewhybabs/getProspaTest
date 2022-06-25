@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 // const { width, height } = Dimensions.get('window');
-import {fadePink, primaryColor, shadowColor, textColor, textColor1, textColor2, textPurple, white} from '../../constants/colors'
+import {borderColor, fadePink, primaryColor, shadowColor, textColor, textColor1, textColor2, textPurple, white} from '../../constants/colors'
 import { width } from '../../constants/dimensions';
 export default StyleSheet.create({
    cardCover:{
@@ -43,5 +43,35 @@ export default StyleSheet.create({
       backgroundColor:fadePink,
       justifyContent:'center',
       alignItems:'center'
+   },
+   circleSmallCard:{
+      height:50,
+      width:50,
+      borderRadius:50/2,
+      justifyContent:'center',
+      alignItems:'center',
+      borderWidth:1,
+      borderColor:borderColor
+   },
+
+   circleCard:{
+      height:70,
+      width:70,
+      borderRadius:70/2,
+      justifyContent:'center',
+      alignItems:'center',
+   },
+   defaultCard:{
+      width:width-40,
+      paddingHorizontal: 18,
+      elevation: 1,
+      backgroundColor: white,
+      shadowColor:'gray',
+      shadowOpacity: 0.5,
+      shadowOffset: { width: 0, height: 0.5 },
+      shadowRadius: 10,
+      borderRadius:7,
+      height:100,
+      padding:10,
    }
 })

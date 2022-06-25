@@ -39,7 +39,7 @@ export default StyleSheet.create({
     },
     textHeaderContainer:{
         padding:20,
-        paddingTop:0
+        paddingTop:10
     },
     dateText:{
         color:textColor1,
@@ -50,7 +50,7 @@ export default StyleSheet.create({
     welcomeText:{
         fontSize:26,
         color:white,
-        paddingBottom:5
+        paddingBottom:5,
     },
     nameText:{
         color:white,
