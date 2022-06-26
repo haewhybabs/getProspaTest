@@ -33,13 +33,13 @@ export default StyleSheet.create({
     
     headerContentWrapper:{
         padding:20,
-        marginTop:ios?30:-20,
+        marginTop:ios?40:-10,
         
     },
     headerText:{
         color:white,
         fontSize:18,
-        textAlign:'center'
+        textAlign:'center',
     },
     headerLeftText:{
         color:pink,

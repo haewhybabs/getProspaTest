@@ -13,7 +13,7 @@ export default function Texts({
     <Text
       style={{...styles.text,...style,
         fontFamily: medium
-        ? "Gilroy-Light"
+        ? "Gilroy-Medium"
         : bold
         ? "Gilroy-Bold"
         : regular

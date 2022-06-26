@@ -15,7 +15,7 @@ export default StyleSheet.create({
     headerWrapper:{
         width:width,
         backgroundColor:primaryColor,
-        height:ios?300:250,
+        height:ios?250:250,
         transform : [ { scaleX : 2 } ],
         borderBottomStartRadius : 150,
         borderBottomEndRadius :150,
@@ -39,7 +39,7 @@ export default StyleSheet.create({
     },
     textHeaderContainer:{
         padding:20,
-        paddingTop:10
+        paddingTop:ios?0:10
     },
     dateText:{
         color:textColor1,

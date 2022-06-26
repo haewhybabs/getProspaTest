@@ -13,4 +13,6 @@ export const background = '#F5F6F7';
 export const pink = '#fa4a84'
 export const dotColor = '#51125A';
 export const borderColor = '#dcdcee';
-export const success = '#00af3f';
+export const success = '#00af3f'; 
+export const purple = '#bb53f2';
+export const switchFalse = '#767577';

@@ -1,5 +1,5 @@
 import Airways from '../assets/svgs/airways.svg';
-import UserTransaction from '../assets/svgs/userTransaction.svg';
+import UserTransaction from '../assets/images/userTransact.png';
 import VTU from  '../assets/svgs/vtu.svg';
 import Invoice from  '../assets/svgs/invoice1.svg';
 import CurrentAccount from '../assets/svgs/currentAccount.svg'
@@ -35,14 +35,15 @@ export const transactionData = [
         name:"Christina Rose",
         type:"salary",
         amount:2500000,
-        debit:true
+        debit:true,
+        image:true
     }
 ]
 
 export const cardItems = [
     {
       id:1,
-      header:'PROSPA CURRENT ACCOUNT',
+      header:'CURRENT ACCOUNT',
       subText: '00-00-00-00-00-00',
       amount:5234.96,
       leftIcon:CurrentAccount,

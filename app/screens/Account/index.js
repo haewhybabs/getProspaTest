@@ -1,4 +1,4 @@
-import { View, Text,StatusBar,Pressable,FlatList, TouchableOpacity } from 'react-native'
+import { View, Text,StatusBar,Pressable,FlatList, TouchableOpacity,Image } from 'react-native'
 import React from 'react'
 import { primaryColor, success, textColor1 } from '../../constants/colors'
 import Texts from '../../components/Texts';
@@ -28,7 +28,9 @@ export default function Account({navigation,route}) {
       <TouchableOpacity onPress={()=>navigation.navigate('Transaction',{item})}>
         <View style={styles.transactionHeadItems}>
           <View style={styles.transactionItem}>
-            {<item.icon />}
+            {
+              item.image?<Image source={item.icon}/>:<item.icon/>
+            }
             <View style={styles.transactionTextItem}>
               <Texts bold style={styles.transactionHeaderText}>{item.name}</Texts>
               <Texts bold style={styles.transactionText}>{item.type}</Texts>
